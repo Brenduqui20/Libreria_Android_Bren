@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Fondo de pantalla completa -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/libreria"
+        android:scaleType="centerCrop" />
+
+    <!-- Contenido del diseño -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Logo al principio -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Leyenda "Iniciar sesión" -->
+        <TextView
+            android:id="@+id/textViewIniciarSesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LIBRERIA GARCIA"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#FF0000"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- CardView con campos de entrada para usuario y contraseña -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Campo de entrada para el usuario -->
+                <EditText
+                    android:id="@+id/editTextUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Usuario"
+                    android:textSize="30sp"
+                    android:inputType="text" />
+
+                <!-- Campo de entrada para la contraseña -->
+                <EditText
+                    android:id="@+id/editTextContraseña"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Contraseña"
+                    android:textSize="30sp"
+                    android:inputType="textPassword" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Botón de inicio de sesión -->
+        <Button
+            android:id="@+id/buttonIniciarSesion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="30sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="INICIAR SESION" />
+
+
+    </LinearLayout>
+</RelativeLayout>
